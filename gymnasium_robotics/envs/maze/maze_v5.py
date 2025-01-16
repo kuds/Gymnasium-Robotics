@@ -49,7 +49,7 @@ class Maze:
     """
 
     def __init__(
-        self,x
+        self,
         maze_map: List[List[Union[str, int]]],
         maze_size_scaling: float,
         maze_height: float,
