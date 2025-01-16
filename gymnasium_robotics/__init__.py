@@ -959,6 +959,18 @@ def register_robotics_envs():
         # ----- PointMaze -----
 
         register(
+            id=f"PointMaze_UMaze{suffix}-v4",
+            entry_point="gymnasium_robotics.envs.maze.point_maze:PointMazeEnv",
+            kwargs=_merge(
+                {
+                    "maze_map": maps.U_MAZE,
+                },
+                kwargs,
+            ),
+            max_episode_steps=300,
+        )
+        
+        register(
             id=f"PointMaze_UMaze{suffix}-v3",
             entry_point="gymnasium_robotics.envs.maze.point_maze:PointMazeEnv",
             kwargs=_merge(
