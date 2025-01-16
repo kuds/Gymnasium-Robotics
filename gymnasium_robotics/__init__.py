@@ -960,7 +960,7 @@ def register_robotics_envs():
 
         register(
             id=f"PointMaze_UMaze{suffix}-v4",
-            entry_point="gymnasium_robotics.envs.maze.point_maze:PointMazeEnv",
+            entry_point="gymnasium_robotics.envs.maze.point_maze_v2:PointMazeEnv",
             kwargs=_merge(
                 {
                     "maze_map": maps.U_MAZE,
